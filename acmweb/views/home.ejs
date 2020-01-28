@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <title>UGH Workshop Registration</title>
+  <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="keywords"
+    content="Full Screen Enroll Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+  <link rel="icon" href="../images/logoacm.png">
+  <!-- css files -->
+  <link rel="stylesheet" href="/styles/style.css" type="text/css" media="all" />
+  <!-- Style-CSS -->
+  <!-- <link rel="stylesheet" href="/styles/font-awesome.min.css"> -->
+  <!-- Font-Awesome-Icons-CSS -->
+  <!-- web-fonts -->
+  <link
+    href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=devanagari,latin-ext"
+    rel="stylesheet">
+  <!-- //web-fonts -->
+</head>
+
+<body>
+  <div class="main-w3ls">
+    <div class="left-content">
+      <div class="w3ls-content">
+        <!-- logo -->
+
+        <!-- //logo -->
+        <h2>UGH Workshop Registration</h2>
+
+      </div>
+      <!-- copyright -->
+      <div class="copyright">
+        <p>&copy; <span class="current-year"></span>-<span class="next-year"></span> Design by UPES <a target="_blank"
+            href="https://upesacm.org/">ACM</a> & <a target="_blank" href="http://www.upesacmwomen.org">ACM-W</a> Web
+          Team
+        </p>
+      </div>
+      <!-- //copyright -->
+    </div>
+    <div class="right-form-agile">
+      <!-- content -->
+      <div class="sub-main-w3">
+        <% if (submission == "unsuccessfull"){%>
+        <h3>Signup Now</h3>
+        <h5>Creating an account is simple..</h5>
+        <p>and won't take longer than a couple of seconds</p>
+
+        <form method="POST" action="/" id="theForm" onsubmit="return validateForm()">
+          <div class="form-style-agile">
+            <label>Your Name</label>
+            <div class="pom-agile">
+              <span class="fa fa-user"></span>
+              <input type="text" name="name" placeholder="Full Name" pattern="^[a-zA-Z ]{4,50}$"
+                title="Name can only contain alphabets" required>
+            </div>
+          </div>
+          <div class="form-style-agile">
+            <label>Branch</label>
+            <div class="pom-agile">
+              <span class="fa fa-envelope-open"></span>
+              <select id="branches" name="branch" required style="width: 100%" ;>
+                <option value="" disabled selected>Select your branch</option>
+                <optgroup label="------SCHOOL OF DESIGN-------">
+                  <option value="B.Des Transportation and Mobility Design">B.Des Transportation and Mobility Design
+                  </option>
+                  <option value="B.Des Industrial & Product Design">B.Des Industrial & Product Design</option>
+                  <option value="B.Des Fashion Design">B.Des Fashion Design</option>
+                  <option value="B.Des Communication & Media Design – Graphic Design">B.Des Communication & Media Design
+                    – Graphic Design</option>
+                  <option value="B.Des Communication and Media Design – Animation & VFX">B.Des Communication and Media
+                    Design – Animation & VFX</option>
+                  <option value="B.Des Communication & Media Design – Interaction Design">B.Des Communication & Media
+                    Design – Interaction Design</option>
+                  <option value="B.Des Communication & Media Design - Gaming">B.Des Communication & Media Design -
+                    Gaming</option>
+                  <option value="B.Des Interior & Retail space Design">B.Des Interior & Retail space Design</option>
+                  <option value="B.Des Bachelor of Fine Arts">B.Des Bachelor of Fine Arts</option>
+                  <option value="M.Des Transportation Design">M.Des Transportation Design</option>
+                  <option value="M.Des Interaction Design">M.Des Interaction Design</option>
+                  <option value="M.Des Industrial Design">M.Des Industrial Design</option>
+                  <option value="M.Des Fashion Design">M.Des Fashion Design</option>
+                </optgroup>
+                <optgroup label="----SCHOOL OF HEALTH SCIENCES-----">
+                  <option value="B.Sc. Food, Nutrition & Dietetics">B.Sc. Food, Nutrition & Dietetics</option>
+                  <option value="BBA Hospital & Healthcare Management">BBA Hospital & Healthcare Management</option>
+                  <option value="Bachelor of Pharmacy (B.Pharma)">Bachelor of Pharmacy (B.Pharma)</option>
+                  <option value="Diploma in Pharmacy (D.Pharma)">Diploma in Pharmacy (D.Pharma)</option>
+                </optgroup>
+                <optgroup label="-----SCHOOL OF COMPUTER SCIENCE------">
+                  <option value="B.Tech CSE-CCVT">B.Tech CSE-CCVT</option>
+                  <option value="B.Tech CSE-OSOS">B.Tech CSE-OSOS</option>
+                  <option value="B.Tech CSE-Big Data">B.Tech CSE-Big Data</option>
+                  <option value="B.Tech CSE-AI&ML">B.Tech CSE-AI&ML</option>
+                  <option value="B.Tech CSE-DevOps">B.Tech CSE-DevOps</option>
+                  <option value="B.Tech CSE-Mobile Application Development">B.Tech CSE-Mobile Application Development
+                  </option>
+                  <option value="B.Tech CSE-CSF">B.Tech CSE-CSF</option>
+                  <option value="B.Tech CSE-E-Com.">B.Tech CSE-E-Com.</option>
+                  <option value="B.Tech CSE-BAO">B.Tech CSE-BAO</option>
+                  <option value="B.Tech CSE-MFT">B.Tech CSE-MFT</option>
+                  <option value="B.Tech CSE-OGI">B.Tech CSE-OGI</option>
+                  <option value="B.Tech CSE-IT Infrastructure">B.Tech CSE-IT Infrastructure</option>
+                  <option value="B.Tech CSE-BFSI">B.Tech CSE-BFSI</option>
+                  <option value="B.Tech CSE-GG">B.Tech CSE-GG</option>
+                  <option value="B.Tech CSE-IOT and Smart Cities">B.Tech CSE-IOT and Smart Cities</option>
+                  <option value="B.Tech CSE-HI">B.Tech CSE-HI</option>
+                  <option value="B.Tech CSE-Manufacturing Systems">B.Tech CSE-Manufacturing Systems</option>
+                  <option value="B.Tech CSE-Telecom Informatics">B.Tech CSE-Telecom Informatics</option>
+                  <option value="B.Tech CSE-Mobile Computing">B.Tech CSE-Mobile Computing</option>
+                  <option value="BCA-BFSI">BCA-BFSI</option>
+                  <option value="BCA-IOT">BCA-IOT</option>
+                  <option value="B.Tech CSE-Blockchain Technology">B.Tech CSE-Blockchain Technology</option>
+                  <option value="B.Tech CSE-Computational Sustainability">B.Tech CSE-Computational Sustainability
+                  </option>
+                  <option value="M.Tech. Computer Science & Engineering">M.Tech. Computer Science & Engineering</option>
+                  <option value="M. Tech By Research">M. Tech By Research</option>
+                </optgroup>
+                <optgroup label="-----SCHOOL OF ENGINEERING-----">
+                  <option value="B.Tech. Aerospace Engineering">B.Tech. Aerospace Engineering</option>
+                  <option value="B.Tech. Geo Informatics Engineering">B.Tech. Geo Informatics Engineering</option>
+                  <option value="B.Tech. Applied Petroleum Engineering with Specialization in Upstream">B.Tech. Applied
+                    Petroleum Engineering with Specialization in Upstream</option>
+                  <option value="B.Tech. Geo Science Engineering">B.Tech. Geo Science Engineering</option>
+                  <option value="B.Tech. Applied Petroleum Engineering with Specialization in Gas Stream">B.Tech.
+                    Applied Petroleum Engineering with Specialization in Gas Stream</option>
+                  <option value="B.Tech. Mechanical Engineering">B.Tech. Mechanical Engineering</option>
+                  <option value="B.Tech. Automotive Design Engineering">B.Tech. Automotive Design Engineering</option>
+                  <option value="B.Tech. Mechatronics Engineering">B.Tech. Mechatronics Engineering</option>
+                  <option value="B.Tech. Aerospace Engineering with specialization In Avionics">B.Tech. Aerospace
+                    Engineering with specialization In Avionics</option>
+                  <option value="B.Tech. Electronics & Communication Engineering">B.Tech. Electronics & Communication
+                    Engineering</option>
+                  <option value="B.Tech. Civil Engineering">B.Tech. Civil Engineering</option>
+                  <option value="B.Tech. Chemical Engineering with Specialization in Refining & Petrochemicals">B.Tech.
+                    Chemical Engineering with Specialization in Refining & Petrochemicals</option>
+                  <option value="B.Tech. Fire & Safety Engineering">B.Tech. Fire & Safety Engineering</option>
+                  <option value="B.Tech. Electrical Engineering">B.Tech. Electrical Engineering</option>
+                  <option value="B.Tech. Metallurgical & Materials Engineering">B.Tech. Metallurgical & Materials
+                    Engineering</option>
+                  <option value="B.Sc. (H) Chemistry">B.Sc. (H) Chemistry</option>
+                  <option value="B.Sc. (H) Mathematics">B.Sc. (H) Mathematics</option>
+                  <option value="B.Sc. (H) Physics">B.Sc. (H) Physics</option>
+                  <option value="B.Tech. Electronics">B.Tech. Electronics</option>
+                  <option value="B.Tech. Instrumentation & Control">B.Tech. Instrumentation & Control</option>
+                  <option value="B.Tech. Mining">B.Tech. Mining</option>
+                  <option value="B.Tech. Production & Industrial Engg.">B.Tech. Production & Industrial Engg.</option>
+                  <option value="B.Tech. Mechanical Engg. Spl in MSNANO.">B.Tech. Mechanical Engg. Spl in MSNANO.
+                  </option>
+                  <option value="B.Tech. Electronics BCT">B.Tech. Electronics BCT</option>
+                  <option value="B.Tech. Electronics IOT based Instrument">B.Tech. Electronics IOT based Instrument
+                  </option>
+                  <option value="B.Tech Material Science spl. in Nano">B.Tech Material Science spl. in Nano</option>
+                  <option value="BTech. Mechanical Engg. Machine Design">BTech. Mechanical Engg. Machine Design</option>
+                  <option value="B.Tech. Mechanical Engineering-Thermal">B.Tech. Mechanical Engineering-Thermal</option>
+                  <option value="B. Tech Power System">B. Tech Power System</option>
+                  <option value="Bachelor of Planning">Bachelor of Planning</option>
+                  <option value="M.Tech. Renewable Energy Engineering">M.Tech. Renewable Energy Engineering</option>
+                  <option value="M.Tech. Chemical Engineering with Specialization in Process Design Engineering">M.Tech.
+                    Chemical Engineering with Specialization in Process Design Engineering</option>
+                  <option value="M.Tech. Petroleum Engineering">M.Tech. Petroleum Engineering</option>
+                  <option value="M.Tech. Pipeline Engineering">M.Tech. Pipeline Engineering</option>
+                  <option value="M.Tech. Rotating Equipment">M.Tech. Rotating Equipment</option>
+                  <option value="M.Tech. Automation & Robotics Engineering">M.Tech. Automation & Robotics Engineering
+                  </option>
+                  <option value="M.Tech. Structural Engineering">M.Tech. Structural Engineering</option>
+                  <option value="M.Tech. Computational Fluid Dynamics">M.Tech. Computational Fluid Dynamics</option>
+                  <option
+                    value="M.Tech. Health Safety & Environmental Engineering with Specialization in Disaster Management">
+                    M.Tech. Health Safety & Environmental Engineering with Specialization in Disaster Management
+                  </option>
+                  <option value="M.Tech. Health Safety & Environmental Engineering">M.Tech. Health Safety &
+                    Environmental Engineering</option>
+                  <option value="M.Tech. Energy Systems">M.Tech. Energy Systems</option>
+                  <option value="M.Sc. Chemistry">M.Sc. Chemistry</option>
+                  <option value="M.Sc. Mathematics">M.Sc. Mathematics</option>
+                  <option value="M.Sc. Physics">M.Sc. Physics</option>
+                  <option value="M.Tech. Nuclear Science & Technology">M.Tech. Nuclear Science & Technology</option>
+                  <option value="M.Tech. Aerospace Engg. - UAV">M.Tech. Aerospace Engg. - UAV</option>
+                  <option value="M.Plan Urban & Regional Planning">M.Plan Urban & Regional Planning</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+          <div class="form-style-agile">
+            <label>Year</label>
+            <div class="pom-agile">
+              <span class="fa fa-address-card"></span>
+              <input placeholder="Year" name="year" type="number" min="1" max="4" required>
+            </div>
+          </div>
+          <div class="form-style-agile">
+            <label>Email</label>
+            <div class="pom-agile">
+              <span class="fa fa-envelope-open"></span>
+              <input placeholder="Email" name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                title="Email should be similar to upesacm@gmail.com" required>
+            </div>
+          </div>
+          <div class="form-style-agile">
+            <label>Calling Number</label>
+            <div class="pom-agile">
+              <span class="fa fa-phone"></span>
+              <input placeholder="Calling Number" name="pnum" type="text" pattern="^[+0-9]{10}$" maxlength="10"
+                title="Number should be of 10 digits" required>
+            </div>
+          </div>
+          <div class="form-style-agile">
+            <label>Whatsapp Number</label>
+            <div class="pom-agile">
+              <span class="fab fa-whatsapp"></span>
+              <input placeholder="Whatsapp Number" name="wnum" type="text" pattern="^[+0-9]{10}$" maxlength="10"
+                title="Number should be of 10 digits" required>
+            </div>
+          </div>
+          <div class="form-style-agile">
+            <label>SAP ID</label>
+            <div class="pom-agile">
+              <span class="fa fa-address-card"></span>
+              <input placeholder="SAP ID" name="sapid" type="text" pattern="^5000{1}[0-9]{5}$" maxlength="9"
+                title="The SAP ID should be in the form eg. 500012345" id="sapid" required>
+            </div>
+          </div>
+          <div class="form-style-agile">
+            <label>ACM Member : <input id="plan" name="mtype" value="No" style="border: none; background: transparent; color: white;font-size: 14px;"></label>
+          </div>
+          <label>Registration amount : <span class="price">Rs 400</span></label>
+          <div>
+            <input type="submit" value="Pay and Submit" id="quickstart-sign-in"/>
+          </div>
+          <div>
+            <br>
+            <p>If you face any problem feel free to reach out to Bidit: +91 9752445641  and Aniket: +91 9717034043</p>
+          </div>
+        </form>
+        <%}%>
+      <% if (submission == "successfull") {%>
+        <h5>Thank you for registering </h5>
+        <p>
+          We've e-mailed you the details regarding the workshop. If you don't receive it shortly, be sure to
+          check your spam folder.
+        </p>
+        <br>
+        <a href="/" class="aa">Go back</a>
+        <%}%>
+      <% if (submission == "notregistered") {%>
+        <h5>There was some problem with your registration. Please try again</h5>
+        <br>
+        <a href="/" class="aa">Go back</a>
+        <%}%>
+  </body>
+
+      <script src="https://kit.fontawesome.com/e96a6e76eb.js"></script>
+      <script type="text/javascript">
+        let option = document.querySelector("#plan");
+        let price = document.querySelector(".price");
+        let currYear = document.querySelector(".current-year");
+        let nextYear = document.querySelector(".next-year");
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyDt9SN6KnVhH3X6UAa7IhvsmKvtqx-rARY",
+          authDomain: "acm-acmw-app-6aa17.firebaseapp.com",
+          databaseURL: "https://acm-acmw-app-6aa17.firebaseio.com/",
+          projectId: "acm-acmw-app-6aa17",
+          storageBucket: "acm-acmw-app-6aa17.appspot.com",
+          messagingSenderId: "1010831108005",
+          appId: "1:1010831108005:web:aaca858414b671e0"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        var rootRef = firebase.database().ref();
+
+        function changePrice(exists = false) {
+          console.log(exists)
+          if (exists == true) {
+            option.value = "Yes";
+            price.innerHTML = "Rs 200";
+          }
+          else{
+            option.value = "No";
+            price.innerHTML = "Rs 400";
+          }
+        }
+
+        function userExistsCallback(userId, exists = false) {
+          document.getElementById('quickstart-sign-in').value = "Pay and Submit";
+        }
+
+        function checkIfUserExists(userId) {
+          var users = rootRef.child("acm_acmw_members/");
+          users.child(userId).once('value', function (snapshot) {
+            var exists = (snapshot.val() !== null);
+            userExistsCallback(userId, exists);
+            changePrice(exists);
+          });
+        }
+
+        window.addEventListener('keyup', function () {
+          var sapID = document.getElementById("sapid").value;
+          checkIfUserExists(sapID);
+        });
+
+        currYear.innerHTML = new Date().getFullYear()
+        nextYear.innerHTML = new Date().getFullYear() + 1
+
+        window.addEventListener("load", changePrice);
+        option.addEventListener("change", changePrice);
+      </script>
+</html>
