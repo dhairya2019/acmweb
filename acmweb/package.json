@@ -18,7 +18,7 @@
     "firebase-admin": "^8.2.0",
     "firebase-functions": "^3.1.0",
     "firebaseui": "^4.1.0",
-    "nodemailer": "^6.3.0",
+    "nodemailer": "^6.4.16",
     "nodemailer-sendgrid-transport": "^0.2.0",
     "nodemon": "^1.19.1",
     "pdfkit": "^0.10.0"
